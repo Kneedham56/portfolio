@@ -45,8 +45,12 @@ h1{font-size:clamp(32px,5.4vw,52px);line-height:1.08;letter-spacing:-.03em;margi
 .steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:14px;line-height:1.35}
 .steps li::before{content:counter(s);display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:12px;font-weight:800;margin-right:8px}
 .steps b{font-weight:700}
-.prev{margin:14px 0 0;font-size:14px;color:var(--muted)}
-.prev b{color:var(--ink)}
+.prev{margin:18px 0 0}
+.prev h3{margin:0 0 8px}
+.prevrow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.prevrow div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:13.5px;line-height:1.4;color:var(--muted)}
+.prevrow b{display:block;color:var(--ink);font-size:15px}
+.prevrow span{display:block;font-size:12px;font-weight:700;color:var(--accent);margin:1px 0 5px}
 
 /* project cards */
 main{display:grid;gap:22px;padding:8px 0 40px}
@@ -84,6 +88,7 @@ footer a{font-weight:600}
 @media (max-width:860px){
   .project{grid-template-columns:1fr;padding:20px;gap:20px}
   .steps{grid-template-columns:1fr 1fr}
+  .prevrow{grid-template-columns:1fr}
 }
 @media (max-width:520px){
   .hero{padding-top:30px}
@@ -108,6 +113,7 @@ footer a{font-weight:600}
   <h1>I turn real workflows into shipped software.</h1>
   <p class="lede">Product owner. I map how the work really gets done, write the spec, direct AI coding tools to build it, and check the results against real numbers. Three projects below, from a working payroll tool to my own options tracking.</p>
   <div class="cta">
+    <a class="btn" href="assets/Kyle-Needham-Resume.pdf">Download resume (PDF)</a>
     <a class="btn alt" href="https://www.linkedin.com/in/kneedham/">LinkedIn</a>
     <a class="btn alt" href="mailto:kylneedham@gmail.com">Email me</a>
   </div>
@@ -117,7 +123,14 @@ footer a{font-weight:600}
     <li><b>Direct</b> the build; I make the product calls</li>
     <li><b>Verify</b> against an independent source</li>
   </ol>
-  <p class="prev"><b>Before this:</b> eight years at Tesla, Credit One and gWorks.</p>
+  <div class="prev">
+    <h3>Before this: eight years in product and automation</h3>
+    <div class="prevrow">
+      <div><b>gWorks</b><span>Lead Technical Product Owner · 2025–26</span>Led onboarding, migrations and a new platform team for 8 engineers. Roughly doubled onboarding speed.</div>
+      <div><b>Credit One Bank</b><span>Product Owner III, Digital Bank · 2024–25</span>Owned the banking core and CRM, and ran the yearly roadmap.</div>
+      <div><b>Tesla</b><span>Software Engineer, RPA Product Owner · 2018–24</span>Automation that cut manual data entry 40% and saved $2,250/month.</div>
+    </div>
+  </div>
 </header>
 
 <main class="wrap">
@@ -163,7 +176,7 @@ footer a{font-weight:600}
     <p class="one">A phone-first app that replaced two resellers' spreadsheets and copy-paste routines. One app, with separate workspaces per business.</p>
     <div class="stats">
       <div class="stat"><b>~45 → ~2 min</b><span>to list an item <em>(estimate)</em></span></div>
-      <div class="stat"><b>Daily use</b><span>by both resellers</span></div>
+      <div class="stat"><b>In use today</b><span>by both resellers, one daily</span></div>
     </div>
     <h3>What I did</h3>
     <ul class="pts">
