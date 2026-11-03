@@ -1,0 +1,14 @@
+import { chromium } from '/opt/node-tools/node_modules/playwright/index.mjs';
+import { pathToFileURL } from 'node:url';
+import path from 'node:path';
+const root = path.resolve(import.meta.dirname, '..');
+const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+let c = await b.newContext({ viewport: { width: 1280, height: 800 }, deviceScaleFactor: 2 });
+let p = await c.newPage();
+await p.goto(pathToFileURL(path.join(root, 'mocks', 'powerwheel.html')).href);
+await p.screenshot({ path: path.join(root, 'shots', 'powerwheel-reports.png') });
+await p.close();
+p = await c.newPage();
+await p.goto('http://localhost:3111/'); await p.waitForTimeout(2500);
+await p.screenshot({ path: path.join(root, 'shots', 'hypewave-market.png') });
+await b.close();

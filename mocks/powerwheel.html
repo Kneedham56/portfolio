@@ -1,0 +1,33 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PowerWheel (mock data)</title>
+<style>
+:root{--bg:#0f1419;--card:#171e27;--line:#263041;--ink:#e6eaf0;--muted:#8b97a8;--g:#3ecf8e;--r:#f26d6d;--a:#6ea8fe}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px Inter,system-ui,-apple-system,Segoe UI,sans-serif;padding:28px 36px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.logo{font-weight:800;font-size:20px}.logo span{color:var(--a)}
+.tabs{display:flex;gap:6px}.tab{padding:7px 14px;border:1px solid var(--line);border-radius:99px;color:var(--muted)}.tab.on{background:var(--a);color:#0a1220;border-color:var(--a);font-weight:700}
+.banner{background:#1d2a3d;border:1px solid var(--line);border-radius:8px;padding:8px 14px;color:var(--muted);margin-bottom:16px}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:16px}.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}.stat .l{color:var(--muted);font-size:12px}.stat .v{font-size:24px;font-weight:700;margin-top:6px}.stat .s{font-size:11px;color:var(--muted);margin-top:2px}
+.g{color:var(--g)}.r{color:var(--r)}
+.grid{display:grid;grid-template-columns:1.2fr 1fr;gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+h3{margin:0 0 10px;font-size:15px}
+.chart{height:170px;display:flex;align-items:flex-end;gap:8px;padding-top:6px}.bar{flex:1;border-radius:4px 4px 0 0;background:var(--g);position:relative}.bar.n{background:var(--r)}.bar i{position:absolute;bottom:-18px;left:0;right:0;text-align:center;font-style:normal;font-size:10px;color:var(--muted)}
+table{width:100%;border-collapse:collapse}th{text-align:left;color:var(--muted);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:6px 8px;border-bottom:1px solid var(--line)}td{padding:8px;border-bottom:1px solid var(--line)}.n{text-align:right}
+.tag{font-size:11px;padding:1px 7px;border-radius:99px;font-weight:700}.put{background:#1f3b2e;color:var(--g)}.call{background:#2d2a45;color:#b4a7ff}
+</style></head><body>
+<div class="top"><div class="logo">Power<span>Wheel</span></div><div class="tabs"><span class="tab">Overview</span><span class="tab on">Reports</span><span class="tab">Cycles</span><span class="tab">Positions</span><span class="tab">Import</span></div></div>
+<div class="banner">Demo mode: read-only, made-up data</div>
+<div class="stats">
+<div class="stat"><div class="l">Net premium (YTD)</div><div class="v g">$18,640</div><div class="s">across 3 streams</div></div>
+<div class="stat"><div class="l">Win rate</div><div class="v">86%</div><div class="s">62 W – 10 L</div></div>
+<div class="stat"><div class="l">Return on capital</div><div class="v">14.2%</div><div class="s">annualized</div></div>
+<div class="stat"><div class="l">Open positions</div><div class="v">11</div><div class="s">$96,400 secured</div></div>
+<div class="stat"><div class="l">Wheel cycles closed</div><div class="v">7</div><div class="s">+$4,310 total</div></div></div>
+<div class="grid"><div class="card"><h3>Weekly net premium</h3><div class="chart">
+<div class="bar" style="height:40%"><i>W36</i></div><div class="bar" style="height:62%"><i>W37</i></div><div class="bar n" style="height:22%"><i>W38</i></div><div class="bar" style="height:78%"><i>W39</i></div><div class="bar" style="height:55%"><i>W40</i></div><div class="bar" style="height:90%"><i>W41</i></div><div class="bar" style="height:48%"><i>W42</i></div><div class="bar" style="height:70%"><i>W43</i></div></div><div style="height:18px"></div></div>
+<div class="card"><h3>Streams</h3><table><tr><th>Stream</th><th class="n">Premium</th><th class="n">Win</th></tr><tr><td>Account A wheel</td><td class="n g">$9,880</td><td class="n">88%</td></tr><tr><td>Account B wheel</td><td class="n g">$6,120</td><td class="n">84%</td></tr><tr><td>Covered calls</td><td class="n g">$2,640</td><td class="n">83%</td></tr></table></div></div>
+<div class="card" style="margin-top:14px"><h3>Week 43 detail</h3><table><tr><th>Ticker</th><th>Type</th><th class="n">Strike</th><th>Outcome</th><th class="n">Net premium</th></tr>
+<tr><td>AAPL</td><td><span class="tag put">PUT</span></td><td class="n">$215</td><td>Expired worthless</td><td class="n g">+$182</td></tr>
+<tr><td>MSFT</td><td><span class="tag put">PUT</span></td><td class="n">$410</td><td>Rolled for credit</td><td class="n g">+$96</td></tr>
+<tr><td>NVDA</td><td><span class="tag call">CALL</span></td><td class="n">$145</td><td>Called away</td><td class="n g">+$310</td></tr>
+<tr><td>AMD</td><td><span class="tag put">PUT</span></td><td class="n">$150</td><td>Bought back early</td><td class="n r">−$64</td></tr></table></div>
+</body></html>

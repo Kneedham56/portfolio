@@ -1,0 +1,12 @@
+import { chromium } from '/opt/node-tools/node_modules/playwright/index.mjs';
+import path from 'node:path';
+const root = path.resolve(import.meta.dirname, '..');
+const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const c = await b.newContext({ viewport: { width: 1280, height: 800 }, deviceScaleFactor: 2 });
+const p = await c.newPage();
+await p.goto('http://localhost:3111/'); await p.waitForTimeout(1500);
+await p.getByText('Start scouting').first().click(); await p.waitForTimeout(2500);
+await p.addStyleTag({ content: 'nextjs-portal{display:none!important}' });
+await p.screenshot({ path: path.join(root, 'shots', 'hypewave-market.png') });
+console.log(await p.url());
+await b.close();

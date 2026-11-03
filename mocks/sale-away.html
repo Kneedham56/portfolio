@@ -1,0 +1,81 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sale Away (mock data)</title>
+<style>
+:root{--bg:#f6f4ef;--surface:#fff;--fg:#1d2433;--muted:#667085;--border:#e4e0d6;--accent:#1f4e79;--coral:#e2725b;--danger:#b42318;--ok:#2e7d4f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.4 -apple-system,system-ui,Segoe UI,Roboto,sans-serif}
+.top{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0}
+.logo{font-weight:800;color:var(--accent);letter-spacing:-.01em}.biz{font-size:13px;color:var(--muted)}
+main{padding:16px 16px 90px}h1{font-size:22px;margin:4px 0 14px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:14px;margin-bottom:12px}
+.step{display:flex;align-items:center;gap:12px}.num{width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:700;flex:none}
+.step b{display:block}.step small{color:var(--muted)}.count{margin-left:auto;font-size:24px;font-weight:800}
+.warn{border-color:#f0c9bf;background:#fff6f3}.warn b{color:var(--danger)}
+.pill{display:inline-block;font-size:12px;padding:2px 9px;border-radius:99px;background:#e8eef5;color:var(--accent);font-weight:600}
+.pill.ok{background:#e3f1e8;color:var(--ok)}.pill.co{background:#fbe6e0;color:#b4452f}
+.row{display:flex;gap:12px;align-items:center}.thumb{width:64px;height:64px;border-radius:12px;flex:none}
+.muted{color:var(--muted)}.sm{font-size:13px}
+.btn{display:block;width:100%;text-align:center;border:0;border-radius:14px;padding:14px;font:600 16px inherit;background:var(--accent);color:#fff}
+.btn.alt{background:#fff;color:var(--accent);border:1px solid var(--accent)}
+.field{margin-bottom:10px}.field label{font-size:12px;color:var(--muted);display:block;margin-bottom:3px}
+.input{border:1px solid var(--border);border-radius:12px;padding:11px 12px;background:#fff;min-height:44px}
+.fill{transition:background .5s}.filled{background:#eef5ff;border-color:#9cbbe0}
+.nav{position:fixed;bottom:0;left:0;right:0;display:flex;justify-content:space-around;background:#fff;border-top:1px solid var(--border);padding:8px 0 14px;font-size:11px;color:var(--muted)}
+.nav div{text-align:center}.nav .on{color:var(--accent);font-weight:700}.nav i{display:block;font-style:normal;font-size:20px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}.stat{background:#fff;border:1px solid var(--border);border-radius:14px;padding:12px}.stat b{font-size:22px;display:block}
+.bar{height:8px;border-radius:5px;background:#e8e4da;overflow:hidden;margin-top:6px}.bar i{display:block;height:100%;background:var(--accent)}
+.screen{display:none}.screen.show{display:block}
+.spin{display:none;color:var(--accent);font-weight:600;padding:8px 0}
+</style></head><body>
+<div class="top"><span class="logo">Sale Away</span><span class="biz">Demo Shop ▾</span></div>
+<main>
+
+<section class="screen" id="home">
+<h1>Good morning</h1>
+<div class="card warn"><div class="step"><div class="num" style="background:var(--coral)">!</div><div><b>Sold somewhere else?</b><small>2 eBay listings ended with no eBay sale</small></div></div></div>
+<div class="card"><div class="step"><div class="num">1</div><div><b>Trips</b><small>Last: Estate sale · Oct 11 · $84</small></div><span class="count">3</span></div></div>
+<div class="card"><div class="step"><div class="num">2</div><div><b>Inventory</b><small>To list 41 · Drafted 12</small></div><span class="count">53</span></div></div>
+<div class="card"><div class="step"><div class="num">3</div><div><b>Listed</b><small>Avg 38 days active</small></div><span class="count">212</span></div></div>
+<div class="card"><div class="step"><div class="num">4</div><div><b>Outgoing</b><small>3 to ship · 2 packed</small></div><span class="count">5</span></div></div>
+<div class="card"><div class="step"><div class="num">5</div><div><b>Completed</b><small>This month</small></div><span class="count">47</span></div></div>
+<div class="stats"><div class="stat"><span class="muted sm">October sales</span><b>$2,184</b></div><div class="stat"><span class="muted sm">Net profit</span><b>$1,306</b></div></div>
+</section>
+
+<section class="screen" id="item">
+<h1>Add listing</h1>
+<div class="card row"><div class="thumb" style="background:linear-gradient(135deg,#8fb7a5,#3d6b5b)"></div><div><b>Photo set · 3 photos</b><div class="muted sm">Trip: Estate sale · Oct 11 · cost $4.00</div></div></div>
+<button class="btn alt" id="gen">✨ Generate listing</button>
+<div class="spin" id="spin">Checking sold comps…</div>
+<div style="height:12px"></div>
+<div class="field"><label>Title (80 max)</label><div class="input fill" id="f-title">&nbsp;</div></div>
+<div class="field"><label>Category</label><div class="input fill" id="f-cat">&nbsp;</div></div>
+<div class="field"><label>Item specifics</label><div class="input fill" id="f-spec">&nbsp;</div></div>
+<div class="row"><div class="field" style="flex:1"><label>List price</label><div class="input fill" id="f-price">&nbsp;</div></div><div class="field" style="flex:1"><label>Decision</label><div class="input fill" id="f-dec">&nbsp;</div></div></div>
+<div class="muted sm" id="conf" style="min-height:20px"></div>
+<div style="height:10px"></div><button class="btn" id="acc">Accept → Ready to List</button>
+</section>
+
+<section class="screen" id="outgoing">
+<h1>Outgoing</h1>
+<div class="card"><div class="row"><div class="thumb" style="background:linear-gradient(135deg,#d9b38c,#a8693a)"></div><div style="flex:1"><b>Vintage Pyrex Butterprint Bowl Set</b><div class="muted sm">Sold $64.00 · ship by Oct 24</div><div class="sm">Bin 000082 · Shelf B</div></div></div><div style="margin-top:10px"><span class="pill co">To ship</span> <span class="pill">Ship to: J. A., Reno NV</span></div></div>
+<div class="card"><div class="row"><div class="thumb" style="background:linear-gradient(135deg,#9db4d6,#3b5a8a)"></div><div style="flex:1"><b>Nike Air Max 90, men's 10</b><div class="muted sm">Sold $92.50 · ship by Oct 23</div><div class="sm">Garage · Toy box</div></div></div><div style="margin-top:10px"><span class="pill ok">Packed</span> <span class="pill">Label bought · $9.45</span></div></div>
+<div class="card"><div class="row"><div class="thumb" style="background:linear-gradient(135deg,#c9c0e0,#6a5aa8)"></div><div style="flex:1"><b>Lot of 6 Vintage Harlequin Books</b><div class="muted sm">Sold on Mercari $38.00</div><div class="sm">Shelf C</div></div></div><div style="margin-top:10px"><span class="pill co">To ship</span> <span class="pill">Mercari</span></div></div>
+<div class="card"><b>Actual fees, not a guess</b><div class="muted sm">Fees pulled from eBay Finances: $9.12 on the Pyrex sale (14.25%)</div><div class="bar"><i style="width:14%"></i></div></div>
+</section>
+
+</main>
+<div class="nav"><div id="n-home"><i>🏠</i>Home</div><div id="n-item"><i>＋</i>Add</div><div id="n-outgoing"><i>📦</i>Outgoing</div><div><i>📊</i>Insights</div><div><i>☰</i>More</div></div>
+<script>
+const s=(location.hash||'#home').slice(1);
+document.getElementById(s).classList.add('show');document.getElementById('n-'+s)?.classList.add('on');
+const set=(id,t)=>{const e=document.getElementById(id);e.textContent=t;e.classList.add('filled')};
+window.runGenerate=function(){
+  document.getElementById('spin').style.display='block';
+  const steps=[[900,()=>{document.getElementById('spin').style.display='none';set('f-title','Vintage Pyrex Butterprint Turquoise Mixing Bowl Set of 4 Amish Pattern')}],
+   [1500,()=>set('f-cat','Pottery & Glass › Glassware › Pyrex')],
+   [2100,()=>set('f-spec','Brand: Pyrex · Pattern: Butterprint · Color: Turquoise · Set of 4')],
+   [2700,()=>{set('f-price','$68.00');set('f-dec','KEEP · Slow Dime')}],
+   [3200,()=>{document.getElementById('conf').textContent='Confidence: medium. Based on 11 sold comps, $52–$79.'}]];
+  steps.forEach(([t,f])=>setTimeout(f,t));
+};
+document.getElementById('gen')?.addEventListener('click',window.runGenerate);
+</script></body></html>
