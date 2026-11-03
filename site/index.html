@@ -4,190 +4,219 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Kyle Needham: Product Work</title>
-<meta name="description" content="Product owner who turns real workflows into shipped software. Four projects: reseller inventory and eBay, contractor payroll, options tracking, and a music-artist market concept.">
+<meta name="description" content="Product owner who turns real workflows into shipped software. Three projects: contractor payroll, a reseller inventory and eBay app, and options tracking.">
 <meta property="og:title" content="Kyle Needham: Product Work">
 <meta property="og:description" content="Real workflows turned into shipped software. Screens use made-up data.">
-<meta property="og:image" content="assets/sale-away-listing.webp">
+<meta property="og:image" content="assets/crew-pay-payrun.webp">
 <style>
-:root{--bg:#faf9f6;--surface:#fff;--ink:#1b1f27;--muted:#5f6b7a;--line:#e5e1d8;--accent:#1f4e79;--accent-ink:#fff;--chip:#eef2f6}
-@media (prefers-color-scheme:dark){:root{--bg:#10141a;--surface:#181e27;--ink:#e8ebf0;--muted:#98a3b3;--line:#2a3340;--accent:#7fb2e5;--accent-ink:#0d1520;--chip:#1f2833}}
+:root{
+  --bg:#f5f3ee;--surface:#fff;--ink:#17202b;--muted:#5d6877;--line:#e3dfd5;
+  --accent:#1f4e79;--accent-ink:#fff;--soft:#e9eff5;--good:#1f7a4d;
+  --radius:16px;--shadow:0 1px 2px rgba(20,30,45,.06),0 8px 24px rgba(20,30,45,.07)
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0f1319;--surface:#171d26;--ink:#e9ecf1;--muted:#9aa5b5;--line:#2a3340;
+  --accent:#7fb2e5;--accent-ink:#0d1520;--soft:#1f2936;--good:#5fcf94;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35)}}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-text-size-adjust:100%}
 a{color:var(--accent)}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-header{padding:64px 0 32px}
-.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
-h1{font-size:clamp(34px,6vw,56px);line-height:1.08;margin:10px 0 16px;letter-spacing:-.03em}
-.lede{font-size:clamp(18px,2.4vw,21px);color:var(--muted);max-width:44em;margin:0 0 20px}
-.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:28px 0 8px}
-.how div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:15px}
-.how b{display:block;margin-bottom:2px}
-.note{font-size:14px;color:var(--muted)}
-nav.jump{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 0}
-nav.jump a{text-decoration:none;background:var(--chip);color:var(--ink);padding:6px 14px;border-radius:99px;font-size:14px;font-weight:600}
-section.project{padding:56px 0;border-top:1px solid var(--line)}
-.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
-h2{font-size:clamp(26px,4vw,36px);line-height:1.15;margin:0 0 8px;letter-spacing:-.02em}
-.sub{color:var(--muted);margin:0 0 22px;max-width:46em}
-.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
-.cols h3{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
-.cols ul{margin:0 0 18px;padding-left:20px}.cols li{margin-bottom:6px}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px}
-.chips span{background:var(--chip);border-radius:99px;padding:3px 11px;font-size:13px}
-.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
-.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;padding:9px 16px;border-radius:10px;font-weight:700;font-size:15px}
-.btn.alt{background:transparent;color:var(--accent);border:1px solid var(--accent)}
-.shots{display:flex;gap:14px;overflow-x:auto;padding:6px 2px 16px;margin-top:26px;scroll-snap-type:x mandatory}
-.shots figure{margin:0;flex:none;scroll-snap-align:start}
-.shots img,.shots video{display:block;border:1px solid var(--line);border-radius:14px;background:var(--surface);box-shadow:0 6px 20px rgba(0,0,0,.08)}
-.shots.phone img,.shots.phone video{height:480px;width:auto}
-.shots.wide img,.shots.wide video{height:300px;width:auto}
-figcaption{font-size:13px;color:var(--muted);margin-top:8px;max-width:22em}
-.badge-fake{font-size:12px;color:var(--muted);margin-top:2px}
-footer{padding:48px 0 70px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
-@media (max-width:760px){.cols{grid-template-columns:1fr}.shots.phone img,.shots.phone video{height:420px}.shots.wide img,.shots.wide video{height:220px}}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* top bar */
+.bar{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:16px;height:52px}
+.bar b{font-size:15px;white-space:nowrap}
+.bar nav{margin-left:auto;display:flex;gap:4px}
+.bar nav a{white-space:nowrap;text-decoration:none;color:var(--muted);font-size:14px;font-weight:600;padding:6px 12px;border-radius:99px}
+.bar nav a:hover{background:var(--soft);color:var(--ink)}
+
+/* hero */
+.hero{padding:44px 0 28px}
+.open{display:inline-flex;align-items:center;gap:8px;background:var(--soft);color:var(--accent);font-weight:700;font-size:13px;padding:5px 12px;border-radius:99px}
+.open i{width:8px;height:8px;border-radius:50%;background:var(--good);display:inline-block}
+h1{font-size:clamp(32px,5.4vw,52px);line-height:1.08;letter-spacing:-.03em;margin:14px 0 12px;max-width:16em}
+.lede{font-size:clamp(17px,2.2vw,19px);color:var(--muted);max-width:40em;margin:0 0 18px}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+.btn{display:inline-block;text-decoration:none;font-weight:700;font-size:15px;padding:10px 18px;border-radius:10px;background:var(--accent);color:var(--accent-ink)}
+.btn.alt{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:14px;line-height:1.35}
+.steps li::before{content:counter(s);display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:12px;font-weight:800;margin-right:8px}
+.steps b{font-weight:700}
+.prev{margin:14px 0 0;font-size:14px;color:var(--muted)}
+.prev b{color:var(--ink)}
+
+/* project cards */
+main{display:grid;gap:22px;padding:8px 0 40px}
+.project{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:28px;align-items:start}
+.kicker{font-size:12px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--accent)}
+h2{font-size:clamp(24px,3.2vw,30px);line-height:1.15;letter-spacing:-.02em;margin:4px 0 6px}
+.one{color:var(--muted);margin:0 0 16px}
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 18px}
+.stat{flex:1 1 130px;background:var(--soft);border-radius:12px;padding:12px 14px}
+.stat b{display:block;font-size:22px;line-height:1.15;letter-spacing:-.01em;color:var(--accent)}
+.stat span{font-size:13px;color:var(--muted);line-height:1.3;display:block;margin-top:3px}
+.stat em{font-style:normal;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+h3{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:16px 0 6px}
+ul.pts{margin:0;padding-left:18px}.pts li{margin:0 0 5px;font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 0}
+.chips span{background:var(--soft);border-radius:99px;padding:3px 10px;font-size:12.5px;color:var(--muted);font-weight:600}
+.links{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;font-size:14px;color:var(--muted)}
+
+/* media */
+.media{min-width:0}
+.frame{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+.frame.browser::before{content:"";display:block;height:22px;background:linear-gradient(var(--soft),var(--soft));border-bottom:1px solid var(--line);
+  background-image:radial-gradient(circle,#e66 3px,transparent 3.5px),radial-gradient(circle,#eb5 3px,transparent 3.5px),radial-gradient(circle,#6b6 3px,transparent 3.5px);
+  background-size:14px 22px;background-repeat:no-repeat;background-position:10px 50%,24px 50%,38px 50%}
+.frame img,.frame video{display:block;width:100%;height:auto}
+.thumbs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.cap{font-size:12.5px;color:var(--muted);margin:6px 2px 0;line-height:1.35}
+.phones{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.phones .frame{border-radius:14px}
+.fine{font-size:12px;color:var(--muted);margin:10px 2px 0}
+
+footer{padding:26px 0 56px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer a{font-weight:600}
+
+@media (max-width:860px){
+  .project{grid-template-columns:1fr;padding:20px;gap:20px}
+  .steps{grid-template-columns:1fr 1fr}
+}
+@media (max-width:520px){
+  .hero{padding-top:30px}
+  .phones{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:6px}
+  .phones .frame{flex:0 0 62%;scroll-snap-align:start}
+  .bar .wrap{gap:8px}.bar nav{gap:0}.bar nav a{padding:6px 7px;font-size:13px}
+  .stat b{font-size:19px;white-space:nowrap}.stat{flex:1 1 140px}
+  .steps{grid-template-columns:1fr}
+}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<header class="wrap">
-  <div class="eyebrow">Kyle Needham · Product owner</div>
+
+<div class="bar"><div class="wrap">
+  <b>Kyle Needham</b>
+  <nav aria-label="Projects"><a href="#crew-pay">Crew Pay</a><a href="#sale-away">Sale Away</a><a href="#powerwheel">PowerWheel</a></nav>
+</div></div>
+
+<header class="wrap hero">
+  <span class="open"><i></i>Open to remote product roles</span>
   <h1>I turn real workflows into shipped software.</h1>
-  <p class="lede">I sit with the person doing the work, map what they actually do, write the spec, direct AI coding tools to build it in phases, and check the results against the real numbers. Four projects below, from a family business to my own trading records.</p>
-  <div class="how">
-    <div><b>1. Map the workflow</b>Interview, then document every manual step and where it should live.</div>
-    <div><b>2. Spec and phase it</b>PRDs, scope limits, and approval gates between phases.</div>
-    <div><b>3. Direct the build</b>I make the product decisions. AI coding tools write the code.</div>
-    <div><b>4. Verify against reality</b>Reconcile outputs to an independent source before trusting them.</div>
+  <p class="lede">Product owner. I map how the work really gets done, write the spec, direct AI coding tools to build it, and check the results against real numbers. Three projects below, from a working payroll tool to my own options tracking.</p>
+  <div class="cta">
+    <a class="btn alt" href="https://www.linkedin.com/in/kneedham/">LinkedIn</a>
+    <a class="btn alt" href="mailto:kylneedham@gmail.com">Email me</a>
   </div>
-  <p class="note">All screens on this page use made-up names and numbers. Built with Claude Code; I own the specs, the decisions and the validation.</p>
-  <nav class="jump" aria-label="Projects"><a href="#sale-away">Sale Away</a><a href="#crew-pay">Crew Pay</a><a href="#powerwheel">PowerWheel</a><a href="#hypewave">HypeWave</a></nav>
+  <ol class="steps">
+    <li><b>Map</b> the workflow with the people doing it</li>
+    <li><b>Spec</b> it in phases with clear scope limits</li>
+    <li><b>Direct</b> the build; I make the product calls</li>
+    <li><b>Verify</b> against an independent source</li>
+  </ol>
+  <p class="prev"><b>Before this:</b> eight years at Tesla, Credit One and gWorks.</p>
 </header>
 
 <main class="wrap">
 
-<section class="project" id="sale-away">
-  <span class="tag">Inventory · eBay · AI</span>
-  <h2>Sale Away With Me</h2>
-  <p class="sub">A phone-first app that replaced a reseller's Excel tracker and copy-paste routine with one place to log, list, ship and reconcile what she sells.</p>
-  <div class="cols">
-    <div>
-      <h3>What I did</h3>
-      <ul>
-        <li>Mapped her 16-step manual routine to app features and wrote a 5-phase plan with an approval gate between each phase.</li>
-        <li>Set the baseline to beat: 446 of 498 sales in 2026 needed a manual fee fix under her old flat-rate estimate.</li>
-        <li>Shipped intake with photos, an AI listing assistant, eBay order sync, actual-fee reconciliation, and one-tap listing.</li>
-      </ul>
+<section class="project" id="crew-pay">
+  <div class="text">
+    <span class="kicker">Payroll · Compliance</span>
+    <h2>Crew Pay</h2>
+    <p class="one">Pays a seasonal haunt's contractors: log who worked, approve a pay run, print checks on pre-numbered stock, onboard crew with signed paperwork.</p>
+    <div class="stats">
+      <div class="stat"><b>131</b><span>contractors paid</span></div>
+      <div class="stat"><b>~1 hr → &lt;1 min</b><span>to build a pay run</span></div>
     </div>
-    <div>
-      <h3>Decisions I'm proud of</h3>
-      <ul>
-        <li>eBay is updated <em>before</em> saving, so a refusal leaves nothing half-done.</li>
-        <li>Mock, sandbox and live eBay modes are kept strictly separate.</li>
-        <li>Unique SKUs, so a repost can never overwrite a live listing.</li>
-        <li>Unknown values stay blank, never zero.</li>
-      </ul>
+    <h3>What I did</h3>
+    <ul class="pts">
+      <li>Replaced a spreadsheet and old portal with one pay-run flow.</li>
+      <li>Check numbers always match the paper stock, with void, reissue and handwritten checks handled.</li>
+      <li>Invite-based onboarding: agreement, disclosures and W-9 signed online, reviewed, then countersigned.</li>
+    </ul>
+    <h3>Why it's trustworthy</h3>
+    <ul class="pts">
+      <li>A check's amount can't change once it exists. The database enforces it.</li>
+      <li>Tax IDs live only in the signed W-9 PDF in a private bucket.</li>
+    </ul>
+    <div class="chips"><span>React</span><span>TypeScript</span><span>Supabase</span><span>PDF generation</span></div>
+    <div class="links">Private repository.</div>
+  </div>
+  <div class="media">
+    <div class="frame browser"><video src="assets/crew-pay-payrun-clip.mp4" poster="assets/crew-pay-payrun.webp" autoplay loop muted playsinline preload="metadata"></video></div>
+    <p class="cap">Approving a pay run. People with missing paperwork are listed but can't be selected.</p>
+    <div class="thumbs">
+      <div><div class="frame"><img src="assets/crew-pay-checks.webp" alt="Check register with confirmed, reissued and voided checks" loading="lazy"></div><p class="cap">Check register</p></div>
+      <div><div class="frame"><img src="assets/crew-pay-onboarding.webp" alt="Onboarding pipeline and sign-up QR code" loading="lazy"></div><p class="cap">Onboarding</p></div>
     </div>
+    <p class="fine">Mock screens, made-up names and amounts.</p>
   </div>
-  <div class="chips"><span>Next.js</span><span>TypeScript</span><span>Supabase / Postgres</span><span>eBay APIs</span><span>Gemini</span><span>PWA</span></div>
-  <div class="links"><a class="btn alt" href="https://github.com/Kneedham56/Sale-Away">Code on GitHub</a></div>
-  <div class="shots phone">
-    <figure><video src="assets/sale-away-listing-clip.mp4" poster="assets/sale-away-listing.webp" autoplay loop muted playsinline preload="metadata"></video><figcaption>Photos in, listing out: title, category, specifics and price filled by the assistant, then accepted by her.</figcaption></figure>
-    <figure><img src="assets/sale-away-home.webp" alt="Home screen showing her five-step workflow with counts" loading="lazy"><figcaption>Her workflow as five steps, with a flag when a listing ended without an eBay sale.</figcaption></figure>
-    <figure><img src="assets/sale-away-outgoing.webp" alt="Outgoing screen with items to ship and storage locations" loading="lazy"><figcaption>Outgoing: what to pack, where it's stored, real fees from eBay.</figcaption></figure>
-  </div>
-  <p class="badge-fake">Mock screens with made-up data.</p>
 </section>
 
-<section class="project" id="crew-pay">
-  <span class="tag">Payroll · Compliance · Printing</span>
-  <h2>Crew Pay</h2>
-  <p class="sub">Pays a seasonal haunt's contractors: record who worked each night, approve a pay run, print checks on pre-numbered stock, and onboard new crew with signed paperwork.</p>
-  <div class="cols">
-    <div>
-      <h3>What I did</h3>
-      <ul>
-        <li>Replaced a spreadsheet-and-old-portal process with one pay run flow.</li>
-        <li>Check numbers always match the paper stock, with void, reissue, handwritten and spoiled-form handling.</li>
-        <li>Invite-based onboarding: agreement, disclosures and a W-9, signed online, reviewed by staff, then countersigned.</li>
-        <li>QR-code self sign-up, plus migration and reconcile scripts to load the season so far.</li>
-      </ul>
+<section class="project" id="sale-away">
+  <div class="text">
+    <span class="kicker">Inventory · eBay · AI</span>
+    <h2>Sale Away With Me</h2>
+    <p class="one">A phone-first app that replaced two resellers' spreadsheets and copy-paste routines. One app, with separate workspaces per business.</p>
+    <div class="stats">
+      <div class="stat"><b>~45 → ~2 min</b><span>to list an item <em>(estimate)</em></span></div>
+      <div class="stat"><b>Daily use</b><span>by both resellers</span></div>
     </div>
-    <div>
-      <h3>Decisions I'm proud of</h3>
-      <ul>
-        <li>Once a check exists its amount can't change. The database enforces it, not just the screen.</li>
-        <li>Tax IDs live only in the signed W-9 PDF in a private bucket.</li>
-        <li>Document text is versioned, so signed paperwork always matches the exact wording signed.</li>
-      </ul>
+    <h3>What I did</h3>
+    <ul class="pts">
+      <li>Mapped a 16-step manual routine to app features in a 5-phase plan with approval gates.</li>
+      <li>Shipped phone intake, an AI listing assistant, eBay order sync, real-fee reconciliation and one-tap listing.</li>
+      <li>Baseline to beat: 446 of 498 sales needed a manual fee fix under the old flat-rate guess.</li>
+    </ul>
+    <h3>Why it's safe</h3>
+    <ul class="pts">
+      <li>eBay is updated <em>before</em> saving, so a refusal leaves nothing half-done.</li>
+      <li>Unique SKUs, so a repost can't overwrite a live listing.</li>
+      <li>Mock, sandbox and live eBay modes kept strictly separate.</li>
+    </ul>
+    <div class="chips"><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>eBay APIs</span><span>Gemini</span></div>
+    <div class="links"><a href="https://github.com/Kneedham56/Sale-Away">Code on GitHub</a></div>
+  </div>
+  <div class="media">
+    <div class="phones">
+      <div><div class="frame"><video src="assets/sale-away-listing-clip.mp4" poster="assets/sale-away-listing.webp" autoplay loop muted playsinline preload="metadata"></video></div><p class="cap">Photos in, listing out</p></div>
+      <div><div class="frame"><img src="assets/sale-away-home.webp" alt="Home screen showing the five-step workflow" loading="lazy"></div><p class="cap">Her workflow, 5 steps</p></div>
+      <div><div class="frame"><img src="assets/sale-away-outgoing.webp" alt="Outgoing screen with items to ship" loading="lazy"></div><p class="cap">What to pack and where</p></div>
     </div>
+    <p class="fine">Mock screens, made-up data.</p>
   </div>
-  <div class="chips"><span>React</span><span>TypeScript</span><span>Supabase / Postgres</span><span>PDF generation</span><span>Vitest</span></div>
-  <div class="links"><span class="note">Private repository. Walkthrough available on request.</span></div>
-  <div class="shots wide">
-    <figure><video src="assets/crew-pay-payrun-clip.mp4" poster="assets/crew-pay-payrun.webp" autoplay loop muted playsinline preload="metadata"></video><figcaption>Approving a pay run: people with missing paperwork are listed but can't be selected.</figcaption></figure>
-    <figure><img src="assets/crew-pay-checks.webp" alt="Check register with confirmed, reissued and voided checks" loading="lazy"><figcaption>Check register: every form number accounted for.</figcaption></figure>
-    <figure><img src="assets/crew-pay-onboarding.webp" alt="Onboarding pipeline and sign-up QR code" loading="lazy"><figcaption>Onboarding pipeline and printable sign-up QR.</figcaption></figure>
-  </div>
-  <p class="badge-fake">Mock screens with made-up names and amounts, restyled generically.</p>
 </section>
 
 <section class="project" id="powerwheel">
-  <span class="tag">Finance · Reporting</span>
-  <h2>PowerWheel</h2>
-  <p class="sub">Tracks and reports on an options "wheel" strategy across brokerage accounts: premiums, rolls, assignments, and how each wheel cycle actually paid.</p>
-  <div class="cols">
-    <div>
-      <h3>What I did</h3>
-      <ul>
-        <li>Wrote the PRD, then parked the AI-forecasting ideas and shipped tracking and reporting first.</li>
-        <li>Defined the win/loss rules: a trade scores on net premium, assigned trades are marked against the stock's close, and wheel cycles are the authority on dollars.</li>
-        <li>Built a read-only broker sync and a CSV importer so other people can use it.</li>
-      </ul>
+  <div class="text">
+    <span class="kicker">Finance · Reporting</span>
+    <h2>PowerWheel</h2>
+    <p class="one">Tracks my options "wheel" strategy across brokerage accounts: premiums, rolls, assignments, and how each wheel cycle actually paid.</p>
+    <div class="stats">
+      <div class="stat"><b>1–3%</b><span>P&amp;L variance vs broker records</span></div>
+      <div class="stat"><b>Exact</b><span>contract counts matched</span></div>
     </div>
-    <div>
-      <h3>How I checked it</h3>
-      <ul>
-        <li>Weekly realized P&amp;L compared to the broker's own figures.</li>
-        <li>CSV import compared to the order sync: contract counts matched exactly, P&amp;L within about 1–3%.</li>
-        <li>Money math lives in database triggers, not scattered across screens.</li>
-      </ul>
-    </div>
+    <h3>What I did</h3>
+    <ul class="pts">
+      <li>Wrote the PRD, parked the AI-forecasting ideas, and shipped tracking and reporting first.</li>
+      <li>Defined the win/loss rules; wheel cycles are the authority on dollars.</li>
+      <li>Built a read-only broker sync and a CSV importer so others can use it.</li>
+    </ul>
+    <h3>How I checked it</h3>
+    <ul class="pts">
+      <li>Weekly P&amp;L compared to the broker's own figures; CSV import compared to the order sync.</li>
+      <li>Money math lives in database triggers, not scattered across screens.</li>
+    </ul>
+    <div class="chips"><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>Recharts</span></div>
+    <div class="links"><a href="https://github.com/Kneedham56/powerwheel">Code on GitHub</a></div>
   </div>
-  <div class="chips"><span>Next.js</span><span>TypeScript</span><span>Supabase / Postgres</span><span>Recharts</span></div>
-  <div class="links"><a class="btn alt" href="https://github.com/Kneedham56/powerwheel">Code on GitHub</a></div>
-  <div class="shots wide">
-    <figure><img src="assets/powerwheel-reports.webp" alt="Reports dashboard with weekly net premium and streams" loading="lazy"><figcaption>Reports: weekly net premium, streams, and per-trade outcomes.</figcaption></figure>
-  </div>
-  <p class="badge-fake">Mock screen with made-up data. The live demo has been retired.</p>
-</section>
-
-<section class="project" id="hypewave">
-  <span class="tag">Concept · Prototype</span>
-  <h2>HypeWave</h2>
-  <p class="sub">A market concept where fans buy and sell shares in music artists. Prices track real audience growth plus player demand. Concept and play-money prototype only; not a live product.</p>
-  <div class="cols">
-    <div>
-      <h3>What I did</h3>
-      <ul>
-        <li>A 775-line PRD: market design, fairness rules, listing lifecycle, architecture, money and legal options, roadmap.</li>
-        <li>A working "time capsule" prototype: start with play money in March, fast-forward to September, see who you called right.</li>
-      </ul>
-    </div>
-    <div>
-      <h3>Design thinking</h3>
-      <ul>
-        <li>Price = a stats-based base value times a hype multiplier, so being right early pays and pump-and-dumps unwind.</li>
-        <li>Fairness by construction: per-artist buy limits, stake caps, and cash-out scoring so you can't pump your own score.</li>
-        <li>The pricing math is unit-tested against the PRD's worked example.</li>
-      </ul>
-    </div>
-  </div>
-  <div class="chips"><span>Next.js</span><span>TypeScript</span><span>Product spec</span></div>
-  <div class="links"><a class="btn alt" href="https://github.com/Kneedham56/hypewave">PRD and prototype on GitHub</a></div>
-  <div class="shots wide">
-    <figure><img src="assets/hypewave-market.webp" alt="HypeWave market screen with fictional artists and prices" loading="lazy"><figcaption>The prototype's market screen. Artists and stats are fictional placeholders.</figcaption></figure>
+  <div class="media">
+    <div class="frame browser"><img src="assets/powerwheel-reports.webp" alt="Reports dashboard with weekly net premium and streams" loading="lazy"></div>
+    <p class="cap">Weekly net premium, streams, and per-trade outcomes.</p>
+    <p class="fine">Mock screen, made-up data.</p>
   </div>
 </section>
 
@@ -195,7 +224,7 @@ footer{padding:48px 0 70px;border-top:1px solid var(--line);color:var(--muted);f
 
 <footer class="wrap">
   <p>Kyle Needham · <a href="https://www.linkedin.com/in/kneedham/">LinkedIn</a> · <a href="https://github.com/Kneedham56">GitHub</a> · <a href="mailto:kylneedham@gmail.com">kylneedham@gmail.com</a></p>
-  <p class="note">Screens on this page are mock-ups or prototypes with made-up data. No customer, contractor or account data appears here.</p>
+  <p>Screens are mock-ups with made-up data. No customer, contractor or account data appears on this page.</p>
 </footer>
 </body>
 </html>
