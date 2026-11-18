@@ -1,0 +1,42 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PowerWheel weekly prep (mock data)</title>
+<style>
+:root{--bg:#0f1419;--card:#171e27;--line:#263041;--ink:#e6eaf0;--muted:#8b97a8;--g:#3ecf8e;--y:#f2c94c;--r:#f26d6d;--a:#6ea8fe}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px Inter,system-ui,-apple-system,Segoe UI,sans-serif;padding:26px 34px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.logo{font-weight:800;font-size:20px}.logo span{color:var(--a)}
+.tabs{display:flex;gap:6px}.tab{padding:6px 14px;border:1px solid var(--line);border-radius:99px;color:var(--muted)}.tab.on{background:var(--a);color:#0a1220;border-color:var(--a);font-weight:700}
+.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--a);font-weight:700}
+h1{font-size:24px;margin:4px 0 4px;letter-spacing:-.01em}.sub{color:var(--muted);margin:0 0 14px}
+.grid{display:grid;grid-template-columns:1.5fr 1fr;gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:14px}
+h3{margin:0 0 8px;font-size:14px}
+table{width:100%;border-collapse:collapse}th{text-align:left;color:var(--muted);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:5px 8px;border-bottom:1px solid var(--line)}td{padding:8px;border-bottom:1px solid var(--line)}.n{text-align:right}
+.pill{font-size:11px;padding:1px 8px;border-radius:99px;font-weight:700}.lead{background:#1f3b2e;color:var(--g)}.imp{background:#2f3a22;color:#b8e07a}.weak{background:#3b3320;color:var(--y)}
+.score{font-weight:800}
+.gauges{display:grid;grid-template-columns:1fr 1fr;gap:8px}.gz{display:flex;gap:8px;align-items:center;background:#121820;border:1px solid var(--line);border-radius:8px;padding:7px 10px}
+.dot{width:10px;height:10px;border-radius:50%;flex:none}.gr{background:var(--g)}.ye{background:var(--y)}.re{background:var(--r)}
+.gz small{color:var(--muted);display:block;font-size:11px}
+.cal div{display:flex;gap:10px;padding:6px 0;border-bottom:1px solid var(--line)}.cal b{width:64px;color:var(--muted);font-weight:600;flex:none}
+.scn{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.scn div{background:#121820;border:1px solid var(--line);border-radius:8px;padding:8px 10px}.scn small{display:block;color:var(--muted)}
+.banner{background:#1d2a3d;border:1px solid var(--line);border-radius:8px;padding:7px 12px;color:var(--muted);margin-bottom:12px}
+</style></head><body>
+<div class="top"><div class="logo">Power<span>Wheel</span></div><div class="tabs"><span class="tab">Overview</span><span class="tab">Reports</span><span class="tab on">Prep</span><span class="tab">Cycles</span></div></div>
+<div class="banner">Demo: made-up data. Market and watchlist data only, never anything about an account.</div>
+<div class="eyebrow">Sunday report · week of Nov 16</div>
+<h1>Stocks stalled near highs while rate worries kept bonds under pressure.</h1>
+<p class="sub">Base case: choppy but supported. Rules version 2026.11.16.1.</p>
+<div class="grid"><div>
+<div class="card"><h3>Top picks this week</h3><table><tr><th>Name</th><th>Setup</th><th>Rotation</th><th class="n">Strike</th><th class="n">Premium</th><th class="n">Score</th></tr>
+<tr><td><b>Health care fund</b></td><td>Leader pulling back</td><td><span class="pill lead">Leading</span></td><td class="n">$172</td><td class="n">0.58 (0.34%)</td><td class="n score">84</td></tr>
+<tr><td><b>Semiconductor fund</b></td><td>Leader</td><td><span class="pill lead">Leading</span></td><td class="n">$236</td><td class="n">1.45 (0.61%)</td><td class="n score">79</td></tr>
+<tr><td><b>Large-cap software</b></td><td>Turning up</td><td><span class="pill imp">Improving</span></td><td class="n">$118</td><td class="n">0.63 (0.53%)</td><td class="n score">71</td></tr>
+<tr><td><b>Industrials fund</b></td><td>Leader pulling back</td><td><span class="pill weak">Weakening</span></td><td class="n">$141</td><td class="n">0.41 (0.29%)</td><td class="n score">66</td></tr>
+<tr><td><b>Payments leader</b></td><td>Leader</td><td><span class="pill imp">Improving</span></td><td class="n">$301</td><td class="n">1.22 (0.41%)</td><td class="n score">64</td></tr></table></div>
+<div class="card"><h3>Scenarios</h3><div class="scn"><div><b>Relief rally</b><small>Likely</small>Signals: QQQ back above its 50-day</div><div><b>Chop</b><small>Possible</small>Signals: VIX stays 15–19</div><div><b>Second leg down</b><small>Less likely</small>Signals: junk bonds break their floor</div></div></div>
+</div><div>
+<div class="card"><h3>Market weather</h3><div class="gauges">
+<div class="gz"><i class="dot ye"></i><div>Fear gauge<small>Nerves up</small></div></div><div class="gz"><i class="dot re"></i><div>Long bonds<small>Yields rising</small></div></div>
+<div class="gz"><i class="dot gr"></i><div>Junk bonds<small>Lenders calm</small></div></div><div class="gz"><i class="dot gr"></i><div>Regional banks<small>Steady</small></div></div>
+<div class="gz"><i class="dot ye"></i><div>Breadth<small>Narrow</small></div></div><div class="gz"><i class="dot gr"></i><div>Copper<small>Demand OK</small></div></div></div></div>
+<div class="card cal"><h3>This week</h3><div><b>Tue</b>Retail sales, 8:30 AM</div><div><b>Wed</b>Fed minutes, 2:00 PM</div><div><b>Thu</b>Big-bank earnings</div><div><b>Fri</b>Monthly options expiration</div></div>
+</div></div>
+</body></html>

@@ -77,6 +77,11 @@ ul.pts{margin:0;padding-left:18px}.pts li{margin:0 0 5px;font-size:15px}
   background-size:14px 22px;background-repeat:no-repeat;background-position:10px 50%,24px 50%,38px 50%}
 .frame img,.frame video{display:block;width:100%;height:auto}
 .thumbs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.thumbs.one{grid-template-columns:1fr}
+.hl{background:var(--soft);border-left:4px solid var(--accent);border-radius:10px;padding:12px 14px;margin:0 0 16px}
+.hl-tag{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.hl p{margin:4px 0 8px;font-size:15px}
+.hl .pts li{font-size:14px}
 .cap{font-size:12.5px;color:var(--muted);margin:6px 2px 0;line-height:1.35}
 .phones{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .phones .frame{border-radius:14px}
@@ -212,9 +217,18 @@ footer a{font-weight:600}
       <div class="stat"><b>1–3%</b><span>P&amp;L variance vs broker records</span></div>
       <div class="stat"><b>Exact</b><span>contract counts matched</span></div>
     </div>
+    <div class="hl">
+      <span class="hl-tag">New: AI weekly market prep</span>
+      <p>A scheduled Claude routine builds a Sunday market report and a Wednesday check: it researches the week's news and calendar and ranks a watchlist for put-selling by a written, versioned ruleset. The numbers come from code; the AI writes only the narrative.</p>
+      <ul class="pts">
+        <li>Top 5 picks are logged against an SPY baseline and settled at expiry, so the suggestions get graded.</li>
+        <li>A paper "AI vs me" race trades the same rules. It never places a real order, and it can only propose rule changes. I decide.</li>
+        <li>Read-only broker access, and the public report never includes anything about an account.</li>
+      </ul>
+    </div>
     <h3>What I did</h3>
     <ul class="pts">
-      <li>Wrote the PRD, parked the AI-forecasting ideas, and shipped tracking and reporting first.</li>
+      <li>Wrote the PRD, shipped tracking and reporting first, and only then added the AI prep once the data could be trusted.</li>
       <li>Defined the win/loss rules; wheel cycles are the authority on dollars.</li>
       <li>Built a read-only broker sync and a CSV importer so others can use it.</li>
     </ul>
@@ -223,13 +237,16 @@ footer a{font-weight:600}
       <li>Weekly P&amp;L compared to the broker's own figures; CSV import compared to the order sync.</li>
       <li>Money math lives in database triggers, not scattered across screens.</li>
     </ul>
-    <div class="chips"><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>Recharts</span></div>
+    <div class="chips"><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>Recharts</span><span>Claude routines</span></div>
     <div class="links"><a href="https://github.com/Kneedham56/powerwheel">Code on GitHub</a></div>
   </div>
   <div class="media">
     <div class="frame browser"><img src="assets/powerwheel-reports.webp" alt="Reports dashboard with weekly net premium and streams" loading="lazy"></div>
     <p class="cap">Weekly net premium, streams, and per-trade outcomes.</p>
-    <p class="fine">Mock screen, made-up data.</p>
+    <div class="thumbs one">
+      <div><div class="frame"><img src="assets/powerwheel-prep.webp" alt="Sunday report with top picks, market weather and scenarios" loading="lazy"></div><p class="cap">The Sunday report: picks, market weather, scenarios and the week's calendar.</p></div>
+    </div>
+    <p class="fine">Mock screens, made-up data.</p>
   </div>
 </section>
 
